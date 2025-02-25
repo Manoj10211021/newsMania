@@ -1,0 +1,241 @@
+/* Reset default margin */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Universal Box Sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Main Layout */
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  background-image: url(./images/cb-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Top Bar */
+.top-container {
+  height: 10vh;
+  width: 100%;
+  background-color: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+  font-size: 50px;
+  font-weight: 500;
+}
+
+/* News Container */
+.news-container {
+  padding-top: 1rem;
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* COVID Tracker */
+.covid {
+  height: 6vh;
+  width: 90vw;
+  position: absolute;
+  left: 5%;
+  top: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #c31432, #240b36);
+  border-radius: 40px;
+  text-align: center;
+  padding: 10px;
+}
+
+.covid:hover {
+  cursor: pointer;
+}
+
+/* News Cards */
+.news1234 {
+  display: flex;
+  width: 90%;
+  height: 70%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.news {
+  width: 23%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.news:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* News Colors */
+.ETnews {
+  background-color: #693d3e;
+}
+.THnews {
+  background-color: #280a4f;
+}
+.HTnews {
+  background-color: #012244;
+}
+.TOInews {
+  background-color: #75151a;
+}
+
+/* News Header */
+.upper {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.lower {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.headline {
+  width: 90%;
+  font-size: 17px;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Notes Section */
+.bottom-container {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #656565;
+  font-size: 25px;
+  font-family: "Calistoga", cursive;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.notes-container:hover {
+  background-color: #505050;
+}
+
+/* Notes Modal */
+.notes-modal-parent {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.notes-modal-parent.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.notes-modal-container {
+  background: white;
+  width: 80%;
+  height: 70%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeout Modal (Welcome Popup) */
+.timeout-modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, #ff8c00, #ff3b3b);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.timeout-modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Screenshot & Download Button */
+.ss {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.news-ss {
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.news-ss:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
